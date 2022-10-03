@@ -1,0 +1,20 @@
+<%- include('partials/header') -%>
+
+  <main class="flex justify-center items-center">
+    <div class="w-max bg-emerald-100 rounded-box">
+      <form action="/restaurants/save" method="POST">
+        <div class="p-10 restaurant-edit">
+            <div class="mb-3 restaurant-name"><input type="text" name="restaurantName" value="<%= restaurant.name %>"></div>
+            <div class="mb-3 restaurant-area"><input type="text" name="restaurantArea" value="<%= restaurant.area %>"></div>
+            <div class="mb-3 restaurant-food"><input type="text" name="restaurantFood" value="<%= restaurant.food %>"></div>
+            <div class="mb-3 restaurant-notes"><textarea name="restaurantNotes" value="<%= restaurant.notes %>"><%= restaurant.notes %></textarea></div>
+            <div class="mt-8 menu-btn">
+                <button type="submit" class="btn btn-accent">Save</button>
+                <button type="button" class="btn btn-accent" onclick="javascript:location.href='/restaurants';">Cancel</button>
+                <input type="hidden" name="restaurantId" value="<%= restaurant._id %>">
+            </div>
+        </div>
+      </form>
+    </div>
+  </main>
+<%- include('partials/footer') -%>

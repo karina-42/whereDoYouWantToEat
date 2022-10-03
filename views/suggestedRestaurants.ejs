@@ -1,0 +1,19 @@
+<%- include('partials/header') -%>
+
+  <main class="flex flex-col justify-center items-center">
+
+    <div class="w-max bg-emerald-100 rounded-box">
+      <h2 class="mb-2 p-2 text-lg font-semibold">Choose from this list</h2>
+      <ul class="p-3">
+        <% for (let restaurant of choice) { %>
+        <li class="mb-3">
+          <p><%= restaurant.name %>, <%= restaurant.area %><%= restaurant.notes ? `, ${restaurant.notes}` : '' %></p>
+        </li>
+      <% } %>
+      </ul>
+    </div>
+  <div><a href="/choose" class="link link-secondary">I want to eat something different</a></div>
+
+  </main>
+
+  <%- include('partials/footer') -%>

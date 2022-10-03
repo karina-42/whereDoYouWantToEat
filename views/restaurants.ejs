@@ -1,0 +1,47 @@
+<%- include('partials/header') -%>
+<main class="flex justify-center align-center">
+  <div class="flex w-full m-2">
+    <div class="grid h-auto flex-grow card bg-emerald-100 rounded-box place-items-center">
+      <h1 class="text-lg font-semibold">Current restaurant list</h1>
+      <ul class="pb-3">
+        <% for (let i = 0; i < restaurants.length; i++) {%>
+          <li class="mb-3">
+            <p><%= restaurants[i].name %>, <%= restaurants[i].area %>, <%= restaurants[i].food %><%= restaurants[i].notes ? `, ${restaurants[i].notes}` : '' %></p>
+            <a class="text-green-700" href="/restaurants/<%= restaurants[i]._id %>">Edit</a> &nbsp;
+            <a class="text-red-700" href="/restaurants/deleteRestaurant/<%= restaurants[i]._id %>" onclick="return confirm('Do you really want to delete this?');">Delete</a>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  
+    <div class="divider divider-horizontal"></div>
+  
+    <div class="grid h-auto flex-grow card bg-emerald-100 rounded-box place-items-center">
+      <div class="mt-5">
+        <h1 class="mb-4 text-lg font-semibold">Add a new restaurant</h1>
+        <!-- put the full path and route for action -->
+        <form action="/restaurants/createRestaurant" method="POST">
+          <div class="mb-3">
+            <label for="title" class="form-label">Restaurant name:</label>
+            <input type="text" class="form-control" id="name" name="name">
+          </div>
+          <div class="mb-3">
+            <label for="area" class="form-label">Where is it located:</label>
+            <input type="text" class="form-control" id="area" name="area">
+          </div>
+          <div class="mb-3">
+            <label for="food" class="form-label">What food it serves:</label>
+            <input type="text" class="form-control" id="food" name="food">
+          </div>
+          <div class="mb-3">
+            <label for="notes" class="form-label">Any notes:</label>
+            <textarea class="form-control" id="notes" name="notes"></textarea>
+          </div>
+          <button type="submit" class="btn btn-accent mb-5" value="Upload">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('partials/footer') -%>

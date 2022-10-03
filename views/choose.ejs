@@ -1,0 +1,54 @@
+<%- include('partials/header') -%>
+
+<main class="flex justify-center align-center">
+  <div class="flex w-full m-2">
+    <div class="grid h-auto w-1/2 flex-grow card bg-emerald-100 rounded-box place-items-center">
+      <div class="p-8 text-center">
+        <h1 class="text-xl mb-3">I don't know what to eat</h1>
+        <% if (data.length === 0) { %>
+          <a href="/restaurants" class="link link-secondary mb-2">Please make a list of your favorite restaurants first</a>
+        <% } else { %>
+          <p class="eat mb-3">Can't think of something to eat?</p>
+        <% } %>
+        <p class="mb-5">Press the button to get a random food suggested, look it up in the dropdown box to get a list of restaurants that serve it</p>
+        <button class="cursor-pointer btn btn-accent" id="random-food">Press</button>
+      </div>
+    </div>
+  
+    <div class="divider divider-horizontal">OR</div>
+  
+    <div class="grid h-auto w-1/2 flex-grow card bg-emerald-100 rounded-box place-items-center">
+      <div class="p-8 text-center">
+        <!-- dropdown -->
+        <h1 class="text-xl mb-3">I don't know where to eat</h1>
+        <p class="mb-3">Can't think of any restaurant to eat at?</p>
+        <p class="mb-3">Pick the kind of food you want to eat</p>
+        <% if (data.length === 0) { %>
+          <a href="/restaurants" class="link link-secondary mb-3">Please make a list of your favorite restaurants first</a>
+        <% } else { %>
+        <form action="/pickFood" method="post">
+          <select id="selectFoodType" name="choice">
+            <!-- Make an array of the food keys -->
+            <% let foodKeys = [] %>
+            <% for(let restaurant of data) { %>
+              <% foodKeys.push(restaurant.food) %>
+            <% } %>
+            <!-- Filter the food keys so they don't repeat in the dropdown list -->
+            <% let uniqueFood = foodKeys.filter((value, index, arr) => { %>
+              <% return arr.indexOf(value) === index %>
+            <% }) %>
+            <!-- Display unique food items in dropdown box -->
+            <% for (const i in uniqueFood) { %>
+            <option value="<%= uniqueFood[i] %>"><%= uniqueFood[i] %></option>
+            <% } %>
+          </select>
+          <input class="cursor-pointer" type="submit" value="Submit">
+        </form>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="main.js"></script>   
+<%- include('partials/footer') -%>
+  
