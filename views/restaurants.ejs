@@ -1,7 +1,7 @@
 <%- include('partials/header') -%>
 <main class="flex justify-center align-center">
-  <div class="flex w-full m-2">
-    <div class="grid h-auto flex-grow card bg-emerald-100 rounded-box place-items-center">
+  <div class="flex flex-col w-full lg:flex-row m-2">
+    <div class="grid flex-grow h-auto lg:w-1/2 lg:m-2 card bg-emerald-100 rounded-box place-items-center p-3">
       <h1 class="text-lg font-semibold">Current restaurant list</h1>
       <ul class="pb-3">
         <% for (let i = 0; i < restaurants.length; i++) {%>
@@ -14,9 +14,9 @@
       </ul>
     </div>
   
-    <div class="divider divider-horizontal"></div>
+    <div class="divider lg:divider-horizontal"></div>
   
-    <div class="grid h-auto flex-grow card bg-emerald-100 rounded-box place-items-center">
+    <div class="grid flex-grow h-auto lg:w-1/2 lg:m-2 card bg-emerald-100 rounded-box place-items-center">
       <div class="mt-5">
         <h1 class="mb-4 text-lg font-semibold">Add a new restaurant</h1>
         <!-- put the full path and route for action -->
