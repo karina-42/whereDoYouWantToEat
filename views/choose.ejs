@@ -45,6 +45,28 @@
     </div>
   </div>
 </main>
+<div class="divider lg:divider-horizontal"></div>
+<section class="bg-emerald-100 rounded-box place-items-center p-8 m-2">
+    <h2 class="text-xl mb-3">I want to eat here next:</h2>
+
+    <ul class="pb-3">
+      <% toEats.forEach(el => { %>
+        <li class="toEatItem mb-3" data-id="<%=el._id%>">
+          <span><%= el.toEat %></span>
+          <span class="del text-red-700 ml-2 cursor-pointer">Delete</span>
+        </li>
+      <% }) %>
+    </ul>
+
+    <form action="/createToEat" method="POST" class="form-control">
+
+      <div class="input-group">
+        <input type="text" class="input input-bordered" placeholder="Restaurant name" name="toEatItem">
+        <input type="submit" class=" btn btn-accent cursor-pointer">
+      </div>
+
+    </form>
+  </section>
 <script src="main.js"></script>   
 <%- include('partials/footer') -%>
   
