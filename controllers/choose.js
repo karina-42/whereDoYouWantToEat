@@ -1,11 +1,13 @@
 const Restaurant = require("../models/Restaurant.js")
+const ToEat = require("../models/ToEat.js")
 
 module.exports = {
   getChoose: async (req, res) => {
     try {
       //get Restaurant data
       const data = await Restaurant.find({user: req.user.id})
-      res.render('choose.ejs', {title: 'Where do you want to eat?', data: data})
+      const toEats = await ToEat.find({user: req.user.id})
+      res.render('choose.ejs', {title: 'Where do you want to eat?', data: data, toEats: toEats})
     } catch (error) {
       console.log(error);
     }
