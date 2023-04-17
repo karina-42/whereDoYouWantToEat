@@ -4,13 +4,23 @@
 
     <div class="w-max bg-emerald-100 rounded-box">
       <h2 class="mb-2 p-2 text-lg font-semibold">Choose from this list</h2>
-      <ul class="p-3">
+      <% for (let restaurant of choice) { %>
+      <div class="card m-8 w-96 bg-base-100 shadow-xl">
+        <div class="card-body">
+          <h2 class="card-title"><%= restaurant.name %></h2>
+          <p><%= restaurant.area %></p>
+          <p><%= restaurant.notes %></p>
+        </div>
+      </div>
+      <% } %>
+
+      <!-- <ul class="p-3">
         <% for (let restaurant of choice) { %>
         <li class="mb-3">
           <p><%= restaurant.name %>, <%= restaurant.area %><%= restaurant.notes ? `, ${restaurant.notes}` : '' %></p>
         </li>
       <% } %>
-      </ul>
+      </ul> -->
     </div>
   <div><a href="/choose" class="link link-secondary">I want to eat something different</a></div>
 
