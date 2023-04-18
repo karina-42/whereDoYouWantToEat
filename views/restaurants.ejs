@@ -3,15 +3,15 @@
   <div class="flex flex-col w-full lg:flex-row m-2">
     <div class="grid flex-grow h-auto lg:w-1/2 lg:m-2 card bg-emerald-100 rounded-box place-items-center p-3">
       <h1 class="text-lg font-semibold">Current restaurant list</h1>
-      <ul class="pb-3">
-        <% for (let i = 0; i < restaurants.length; i++) {%>
-          <li class="mb-3">
-            <p><%= restaurants[i].name %>, <%= restaurants[i].area %>, <%= restaurants[i].food %><%= restaurants[i].notes ? `, ${restaurants[i].notes}` : '' %></p>
-            <a class="text-green-700" href="/restaurants/<%= restaurants[i]._id %>">Edit</a> &nbsp;
-            <a class="text-red-700" href="/restaurants/deleteRestaurant/<%= restaurants[i]._id %>" onclick="return confirm('Do you really want to delete this?');">Delete</a>
-          </li>
+      <% for (let restaurant of restaurants) { %>
+        <div class="card m-2 w-96 bg-base-100 shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title"><%= restaurant.name %></h2>
+            <p><%= restaurant.area %></p>
+            <p><%= restaurant.notes %></p>
+          </div>
+        </div>
         <% } %>
-      </ul>
     </div>
   
     <div class="divider lg:divider-horizontal"></div>
