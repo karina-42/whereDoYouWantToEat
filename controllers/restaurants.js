@@ -3,7 +3,7 @@ const Restaurant = require('../models/Restaurant.js')
 module.exports = {
   getRestaurants: async (req, res) => {
     try {
-      const restaurants = await Restaurant.find({user: req.user.id})
+      const restaurants = await Restaurant.find({user: req.user.id}).sort({name: 'asc'})
       res.render('restaurants.ejs', {title: 'Restaurants', restaurants: restaurants})
       
     } catch (error) {
