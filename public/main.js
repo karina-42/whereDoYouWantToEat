@@ -25,7 +25,7 @@ btn.addEventListener('click', function(e) {
     let pickRandomFood = uniqueFood[Math.floor(Math.random() * uniqueFood.length)]
     
     eat.textContent = `How about ${pickRandomFood}?`
-    eat.style.backgroundColor = 'red'
+    eat.style.backgroundColor = 'blue'
   })
 })
 
