@@ -8,9 +8,9 @@
             <div class="mb-3 restaurant-area"><input type="text" name="restaurantArea" value="<%= restaurant.area %>"></div>
             <div class="mb-3 restaurant-food"><input type="text" name="restaurantFood" value="<%= restaurant.food %>"></div>
             <div class="mb-3 restaurant-notes"><textarea name="restaurantNotes" value="<%= restaurant.notes %>"><%= restaurant.notes %></textarea></div>
-            <div class="mt-8 menu-btn">
+            <div class="mt-8">
                 <button type="submit" class="btn btn-accent">Save</button>
-                <button type="button" class="btn btn-accent" onclick="javascript:location.href='/restaurants';">Cancel</button>
+                <button type="button" class="btn btn-error" onclick="javascript:location.href='/restaurants'">Cancel</button>
                 <input type="hidden" name="restaurantId" value="<%= restaurant._id %>">
             </div>
         </div>
