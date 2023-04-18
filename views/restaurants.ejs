@@ -8,7 +8,12 @@
           <div class="card-body">
             <h2 class="card-title"><%= restaurant.name %></h2>
             <p><%= restaurant.area %></p>
+            <p><%= restaurant.food %></p>
             <p><%= restaurant.notes %></p>
+            <div>
+              <a class="text-green-700 mr-5" href="/restaurants/<%= restaurant._id %>">Edit</a>
+              <a class="text-red-700" href="/restaurants/deleteRestaurant/<%= restaurant._id %>" onclick="return confirm('Do you really want to delete this?')">Delete</a>
+            </div>
           </div>
         </div>
         <% } %>
