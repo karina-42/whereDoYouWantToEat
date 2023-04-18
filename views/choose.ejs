@@ -24,7 +24,7 @@
         <a href="/restaurants" class="link link-secondary mb-3">Please make a list of your favorite restaurants first</a>
       <% } else { %>
       <form action="/pickFood" method="post">
-        <select id="selectFoodType" name="choice">
+        <select class="select text-lg" id="selectFoodType" name="choice">
           <!-- Make an array of the food keys -->
           <% let foodKeys = [] %>
           <% for(let restaurant of data) { %>
@@ -34,12 +34,13 @@
           <% let uniqueFood = foodKeys.filter((value, index, arr) => { %>
             <% return arr.indexOf(value) === index %>
           <% }) %>
+
           <!-- Display unique food items in dropdown box -->
           <% for (const i in uniqueFood) { %>
           <option value="<%= uniqueFood[i] %>"><%= uniqueFood[i] %></option>
           <% } %>
         </select>
-        <input class="cursor-pointer" type="submit" value="Submit">
+        <button class="btn btn-accent ml-2">Submit</button>
       </form>
       <% } %>
     </div>
