@@ -4,10 +4,11 @@ const ToEat = require("../models/ToEat.js")
 module.exports = {
   getChoose: async (req, res) => {
     try {
-      //get Restaurant data
-      const data = await Restaurant.find({user: req.user.id})
+      //get Restaurant data => return only food key info
+      const foodList = await Restaurant.find({user: req.user.id}, "food").sort({food: 1})
+      //get list of restaurants to eat at in the future
       const toEats = await ToEat.find({user: req.user.id})
-      res.render('choose.ejs', {title: 'Where do you want to eat?', data: data, toEats: toEats})
+      res.render('choose.ejs', {title: 'Where do you want to eat?', foodList: foodList, toEats: toEats})
     } catch (error) {
       console.log(error);
     }

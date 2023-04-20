@@ -4,7 +4,7 @@
   <div class="flex flex-col w-full lg:flex-row m-2">
     <div class="grid lg:h-auto lg:w-1/2 lg:m-2 flex-grow card bg-emerald-100 rounded-box place-items-center p-8 text-center">
       <h1 class="text-xl mb-3">I don't know what to eat</h1>
-      <% if (data.length === 0) { %>
+      <% if (foodList.length === 0) { %>
         <a href="/restaurants" class="link link-secondary mb-2">Please make a list of your favorite restaurants first</a>
       <% } else { %>
         <p class="eat mb-3">Can't think of something to eat?</p>
@@ -20,15 +20,15 @@
       <h1 class="text-xl mb-3">I don't know where to eat</h1>
       <p class="mb-3">Can't think of any restaurant to eat at?</p>
       <p class="mb-3">Pick the kind of food you want to eat</p>
-      <% if (data.length === 0) { %>
+      <% if (foodList.length === 0) { %>
         <a href="/restaurants" class="link link-secondary mb-3">Please make a list of your favorite restaurants first</a>
       <% } else { %>
       <form action="/pickFood" method="post">
         <select class="select text-lg" id="selectFoodType" name="choice">
           <!-- Make an array of the food keys -->
           <% let foodKeys = [] %>
-          <% for(let restaurant of data) { %>
-            <% foodKeys.push(restaurant.food) %>
+          <% for(let food of foodList) { %>
+            <% foodKeys.push(food.food) %>
           <% } %>
           <!-- Filter the food keys so they don't repeat in the dropdown list -->
           <% let uniqueFood = foodKeys.filter((value, index, arr) => { %>
