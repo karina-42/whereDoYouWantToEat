@@ -12,8 +12,8 @@ Demo password: 12345678
 ## Table of Contents
 * [Introduction](#introduction)
 * [Technologies](#technologies)
-* [Setup](#setup)
-* [Status](#status)
+* [Lessons learned](#lessons-learned)
+* [Improvements](#improvements)
 
 ## Introduction
 
@@ -41,3 +41,9 @@ Following the principals of MVC, I created the backend using the Node.js framewo
 
 ## Lessons learned
 I learned how to manipulate and display the data coming from Mongo.DB in both EJS and in a seperate Javascript file according to what was necessary.
+
+## Improvements
+- [ ] Changing the types of food input to a group of radial button would help when inputting a new restaurant
+- [ ] Optimize the food suggestion randomizer to not repeat food if the button is pressed several times
+
+[Back to top](#where-do-you-want-to-eat)
