@@ -7,7 +7,7 @@ Demo Email: demo@demo.com
 
 Demo password: 12345678
 
-![screenshot1](https://res.cloudinary.com/dslxa2yhi/image/upload/v1682053865/portfolioReadmeScreenshots/wdywtescreen_quxi6z.png)
+![screenshot1](https://res.cloudinary.com/dslxa2yhi/image/upload/v1682059994/portfolioReadmeScreenshots/wdywtescreen_e5lepz.png)
 
 ## Table of Contents
 * [Introduction](#introduction)
@@ -19,12 +19,12 @@ Demo password: 12345678
 
 This app allows you to create a list of your favorite restaurants and restaurants that you want to try in the future. You can add the location of the restaurant, what type of food it serves, and any particular notes or comments you may have about the restaurant.
 
-![adding](https://res.cloudinary.com/dslxa2yhi/image/upload/v1682055256/portfolioReadmeScreenshots/wdywtescreen3_dl2npj.png)
+![adding](https://res.cloudinary.com/dslxa2yhi/image/upload/v1682060136/portfolioReadmeScreenshots/wdywtescreen2_svtxog.png)
 
 When you want to eat out but can't think of a place to eat at, please use this app. It will show you a list of restaurants that serve the type of food you select from a dropdown box. If you can't think of something to eat, the app can suggest a random food to you by pressing the button at the left of the screen.
 
-![choosing](https://res.cloudinary.com/dslxa2yhi/image/upload/v1682055256/portfolioReadmeScreenshots/wdywtescreen2_x7dwvz.png)
-![results](https://res.cloudinary.com/dslxa2yhi/image/upload/v1682055612/portfolioReadmeScreenshots/wdywtescreen4_ifjhcs.png)
+![choosing](https://res.cloudinary.com/dslxa2yhi/image/upload/v1682060273/portfolioReadmeScreenshots/wdywtescreen3_gnuc5v.png)
+![results](https://res.cloudinary.com/dslxa2yhi/image/upload/v1682060401/portfolioReadmeScreenshots/wdywtescreen4_pqyrqb.png)
 
 
 ## Technologies
