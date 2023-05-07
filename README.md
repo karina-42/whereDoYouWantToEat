@@ -45,5 +45,6 @@ I learned how to manipulate and display the data coming from Mongo.DB in both EJ
 ## Improvements
 - [ ] Changing the types of food input to a group of radial button would help when inputting a new restaurant
 - [ ] Optimize the food suggestion randomizer to not repeat food if the button is pressed several times
+- [ ] Have a modal pop up when getting a suggestion for a type of food to eat, include picture of the food, one button to accept and continue to the list of restaurants, and another button to go back and get another random food suggestion
 
 [Back to top](#where-do-you-want-to-eat)
