@@ -37,10 +37,10 @@ Tech used:
 * Mongo.DB
 * Mongoose
 
-Following the principals of MVC, I created the backend using the Node.js framework Express and Mongoose for Mongo.DB for the database.
+Following the principles of MVC, I created the backend using the Node.js framework Express and Mongoose for Mongo.DB for the database.
 
 ## Lessons learned
-I learned how to manipulate and display the data coming from Mongo.DB in both EJS and in a seperate Javascript file according to what was necessary.
+I learned how to manipulate and display the data coming from Mongo.DB in both EJS and in a separate JavaScript file according to what was necessary.
 
 ## Improvements
 - [ ] Changing the types of food input to a group of radial button would help when inputting a new restaurant
